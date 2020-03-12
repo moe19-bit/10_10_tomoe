@@ -62,27 +62,26 @@
       // 送信の処理
       axios.post(loginUrl, postData)
         .then(response => {
-          alert("1");
+
           // 成功した時
           console.log(response);
           // レスポンスがtrueだったらメインページへ移動
           if (response.data.result == true) {
-            alert("2");
+
             location.href = 'index.php';
           } else {
-            alert("3");
+
             // falseだったら何もしない
             alert('error');
             return false;
           }
-          alert("4");
+
           // 入力欄を空にする処理
           document.getElementById('user_id').value = '';
           document.getElementById('password').value = '';
         })
         .catch(error => {
           // 失敗した時
-          alert("5");
           console.log(error);
           alert(error);
         })

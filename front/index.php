@@ -209,7 +209,6 @@ echo '<a href="../api/logout.php">log out</a>';
       axios.get(url)
         .then(response => {
           // 成功した時
-          alert("1");
           console.log(response);
           // テーブルタグの中身を生成して表示
           document.getElementById('echo').innerHTML = convertArraytoListTag(response.data);
@@ -279,9 +278,7 @@ echo '<a href="../api/logout.php">log out</a>';
           console.log(error);
           alert(error);
         })
-        .finally(() => {
-          alert("2");
-        });
+        .finally(() => {});
     }
 
 
